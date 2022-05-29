@@ -22,15 +22,15 @@ import "./Video.css";
 
 const server_url =
   process.env.NODE_ENV === "production"
-    ? "https://video.sebastienbiollo.com"
+    ? "https://35.192.13.45"
     : "http://localhost:4001";
 
 var connections = {};
 const peerConnectionConfig = {
   iceServers: [
     // { 'urls': 'stun:stun.services.mozilla.com' },
-    // { 'urls': 'stun:stun.l.google.com:19302' },
-    { urls: "demo" },
+    { urls: "stun:stun.l.google.com:19302" },
+    // { urls: "demo" },
   ],
 };
 var socket = null;
