@@ -28,9 +28,16 @@ const server_url =
 var connections = {};
 const peerConnectionConfig = {
   iceServers: [
-    // { 'urls': 'stun:stun.services.mozilla.com' },
-    { urls: "stun:stun.l.google.com:19302" },
-    // { urls: "demo" },
+    // // { 'urls': 'stun:stun.services.mozilla.com' },
+    // // { urls: "turn:35.192.13.45:3478" },
+    // { urls: "stun.l.google.com:19302" },
+
+    // // { urls: "demo" },
+    {
+      urls: "turn:35.192.13.45:3478",
+      username: process.env.REACT_APP_TURN_USERNAME,
+      credential: process.env.REACT_APP_TURN_PASSWORD
+    }
   ],
 };
 var socket = null;
