@@ -30,7 +30,7 @@ const peerConnectionConfig = {
   iceServers: [
     // // { 'urls': 'stun:stun.services.mozilla.com' },
     // // { urls: "turn:35.192.13.45:3478" },
-    // { urls: "stun.l.google.com:19302" },
+    { urls: "stun.l.google.com:19302" },
 
     // // { urls: "demo" },
     {
